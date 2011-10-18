@@ -1,0 +1,22 @@
+2011-10-17 23:57:29.482 GMT : Apache Derby Servidor de Rede - 10.6.2.1 - (999685) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+----------------------------------------------------------------
+2011-10-17 23:57:30.049 GMT:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instância a816c00e-0133-1451-8f81-000005c84b88
+no diretório de banco de dados /home/luiz/NetBeansProjects/ProjetoProgramacaoWeb/projeto  
+
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_26-b03
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
+
+2011-10-17 23:57:38.435 GMT:
+Encerrando a instância a816c00e-0133-1451-8f81-000005c84b88
+----------------------------------------------------------------
+2011-10-17 23:57:38.467 GMT Thread[DRDAConnThread_4,5,main] (DATABASE = projeto), (DRDAID = {2}), Banco de dados 'projeto' fechado.
+----------------------------------------------------------------
+2011-10-17 23:59:28.335 GMT:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instância 2ba7c09b-0133-1451-8f81-000005c84b88
+no diretório de banco de dados /home/luiz/NetBeansProjects/ProjetoProgramacaoWeb/projeto  
+
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_26-b03
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
