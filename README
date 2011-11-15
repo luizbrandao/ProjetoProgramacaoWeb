@@ -1,0 +1,26 @@
+TRABALHO DE PROGRAMAÇAO WEB I
+DATA LIMITE PARA ENTREGA DO TRABALHO: 15/12/2011
+
+Criar um sistema web em Java que possua as seguintes características:
+* Classes de dados
+
+Persistentes
+Produto (idProduto, nome, valorUnitario, imagem, qtdeEstoque)
+NotaFiscal (idNota, nomeCliente, dataEmissao)
+ItemNota (idNota, idProduto, qtde, valorUnitario)
+
+Transientes
+ItemCarrinho (Produto, qtde)
+Carrinho (ItemCarrinho[ ])
+* O usuário poderá realizar as seguintes operações: Login, Buscar Produtos, Adicionar Produto ao Carrinho, Visualizar
+
+Carrinho, Emitir Nota Fiscal e Visualizar Notas;
+* O procedimento de emitir nota fiscal deve salvar os produtos do carrinho nas tabelas NotaFiscal e ItemNota e destruir o
+carrinho;
+* O login deve ser mantido utilizando cookies;
+* Utilizar Captcha para realizar o login;
+* Permitir acesso a compra de produtos apenas se estiver logado (utilizar filtros);
+* Utilizar Servlets para a camada controladora (evitar utilização de scriptlets na página);
+* Utilizar apenas banco de dados embutido (e.g. HSQLDB);
+
+
