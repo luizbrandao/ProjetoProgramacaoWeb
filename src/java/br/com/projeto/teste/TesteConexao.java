@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class TesteConexao {
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws ClassNotFoundException {
         try {
             Connection connection = new ConnectionFactory().getConnection();
             System.out.println("Conexão aberta!");

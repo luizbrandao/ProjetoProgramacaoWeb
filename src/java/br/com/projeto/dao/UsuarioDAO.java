@@ -4,7 +4,10 @@ import br.com.projeto.jdbc.ConnectionFactory;
 import br.com.projeto.vo.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -14,8 +17,8 @@ public class UsuarioDAO {
 
     private Connection connection;
     static PreparedStatement stmt;
-    
-    public UsuarioDAO() {
+
+    public UsuarioDAO() throws ClassNotFoundException {
         this.connection = new ConnectionFactory().getConnection();
     }
 
@@ -33,17 +36,39 @@ public class UsuarioDAO {
         }
     }
 
+    public List<Usuario> getLista() {
+        try {
+            List<Usuario> usuarios = new ArrayList<Usuario>();
+            PreparedStatement stmt = this.connection.prepareStatement("select * from usuario");
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Usuario usuario = new Usuario();
+                usuario.setIdUsuario(rs.getInt("idusuario"));
+                usuario.setNomeUsuario(rs.getString("nomeusuario"));
+                usuario.setSenha(rs.getString("senha"));
+
+                usuarios.add(usuario);
+            }
+            rs.close();
+            stmt.close();
+            return usuarios;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public Usuario Login(Usuario usuario) {
-        String nomeUsuario = usuario.getNomeUsuario();
-        String senha = usuario.getSenha();
-        String sql = "select * from usuario where nomeusuario ='" + nomeUsuario + "' and senha = '" + senha + "'";
+        String sql = "SELECT NOMEUSUARIO, SENHA FROM USUARIO WHERE NOMEUSUARIO = ? AND SENHA = ?";
         try {
             stmt = connection.prepareStatement(sql);
-            
-            
-        }catch(Exception e){
-            
+            stmt.setString(1, usuario.getNomeUsuario());
+            stmt.setString(2, usuario.getSenha());
+            stmt.execute();
+            stmt.close();
+            return usuario;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-        return usuario;
     }
 }
