@@ -18,26 +18,32 @@ public class LoginServlet extends HttpServlet {
         try {
             Usuario usuarioLogin = new Usuario();
             Usuario usuario = new Usuario();
-            usuario.setNomeUsuario(req.getParameter("nomeUsuario"));
-            usuario.setSenha(req.getParameter("senha"));
-            UsuarioDAO dao = new UsuarioDAO();
-            usuarioLogin = dao.Login(usuario);
+            String user = req.getParameter("nomeUsuario");
+            String password = req.getParameter("senha");
+            if (user != "" && password != "") {
+                usuario.setNomeUsuario(req.getParameter(user));
+                usuario.setSenha(req.getParameter(password));
+                UsuarioDAO dao = new UsuarioDAO();
+                usuarioLogin = dao.Login(usuario);
+                String kaptchaExpected = (String) req.getSession().getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
+                String kaptchaReceived = req.getParameter("kaptcha");
 
-            String kaptchaExpected = (String) req.getSession().getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
-            String kaptchaReceived = req.getParameter("kaptcha");
-            
-            if (kaptchaReceived == null || !kaptchaReceived.equalsIgnoreCase(kaptchaExpected)) {
-                System.out.println("Erro!");
-            }else{
-                if (usuarioLogin != null) {
-                    System.out.println("Login realizado com sucesso");
-                    RequestDispatcher rd = req.getRequestDispatcher("/principal.jsp");
-                    rd.forward(req, res);
+                if (kaptchaReceived
+                        == null || !kaptchaReceived.equalsIgnoreCase(kaptchaExpected)) {
+                    System.out.println("Erro no Kaptcha!");
                 } else {
-                    System.out.println("Login inválido!");
-                    RequestDispatcher rd = req.getRequestDispatcher("/index.jsp");
-                    rd.forward(req, res);
+                    if (usuarioLogin != null) {
+                        System.out.println("Login realizado com sucesso");
+                        RequestDispatcher rd = req.getRequestDispatcher("/principal.jsp");
+                        rd.forward(req, res);
+                    } else {
+                        System.out.println("Login inválido!");
+                        RequestDispatcher rd = req.getRequestDispatcher("/index.jsp");
+                        rd.forward(req, res);
+                    }
                 }
+            } else {
+                System.out.print("Não foi possivel realizar o login!");
             }
         } catch (Exception e) {
             throw new RuntimeException(e);

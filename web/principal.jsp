@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Escolha sua Ação</h1>
-        Buscar Produtos
+        <a href="buscaProduto.jsp">Buscar Produtos</a>
         Adicionar Produto ao Carrinho
         Visualizar Carrinho
         Emitir Nota Fiscal

@@ -11,8 +11,7 @@ package br.com.projeto.vo;
 public class Produto {
 
     private int idProduto;
-    private String nomeProduto;
-    private double valorUnitario;
+    private String nome;
     private String imagem;
     private int qtdeEstoque;
 
@@ -33,15 +32,15 @@ public class Produto {
     /**
      * @return the nome
      */
-    public String getNomeProduto() {
-        return nomeProduto;
+    public String getNome() {
+        return nome;
     }
 
     /**
      * @param nome the nome to set
      */
-    public void setNomeProduto(String nomeProduto) {
-        this.nomeProduto = nomeProduto;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     /**
@@ -70,19 +69,5 @@ public class Produto {
      */
     public void setQtdeEstoque(int qtdeEstoque) {
         this.qtdeEstoque = qtdeEstoque;
-    }
-
-    /**
-     * @return the valorunitario
-     */
-    public double getValorUnitario() {
-        return valorUnitario;
-    }
-
-    /**
-     * @param valorunitario the valorunitario to set
-     */
-    public void setValorUnitario(double valorUnitario) {
-        this.valorUnitario = valorUnitario;
     }
 }
