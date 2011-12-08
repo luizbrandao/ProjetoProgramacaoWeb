@@ -21,7 +21,7 @@ public class ProdutoDAO {
         connection = new ConnectionFactory().getConnection();
     }
 
-    public List<Produto> getLista() throws SQLException {
+    public List<Produto> getLista() {
         try {
             List<Produto> produtos = new ArrayList<Produto>();
             PreparedStatement stmt = connection.prepareStatement("select * from produto");
@@ -30,10 +30,10 @@ public class ProdutoDAO {
                 Produto produto = new Produto();
                 produto.setIdProduto(rs.getInt("idproduto"));
                 produto.setNomeProduto(rs.getString("nomeproduto"));
-                produto.setValorUnitario(rs.getDouble("valorunitario"));
+                produto.setValorUnitario(rs.getFloat("valorunitario"));
                 produto.setImagem(rs.getString("imagem"));
                 produto.setQtdeEstoque(rs.getInt("qtdeestoque"));
-                
+
                 produtos.add(produto);
             }
             rs.close();
@@ -46,16 +46,40 @@ public class ProdutoDAO {
 
     public void adiciona(Produto produto) {
         try {
-            String sql = "insert into produto (nomeproduto, valorunitario, imagem, qtdeestoque) values (?,?,?,?)";
+            String sql = "insert into produto (idproduto, nomeproduto, valorunitario, imagem, qtdeestoque) values (nextval('seq_produto'),?,?,?,?)";
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, produto.getNomeProduto());
-            stmt.setDouble(2, produto.getValorUnitario());
+            stmt.setFloat(2, produto.getValorUnitario());
             stmt.setString(3, produto.getImagem());
             stmt.setInt(4, produto.getQtdeEstoque());
-            
+
             stmt.execute();
             stmt.close();
             System.out.println("Gravado com sucesso!");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<Produto> pesquisar(Produto produto) {
+        try {
+            List<Produto> produtos = new ArrayList<Produto>();
+            String sql = "select * from produto where nomeproduto like ?";
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setString(1,produto.getNomeProduto());
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                produto.setIdProduto(rs.getInt("idproduto"));
+                produto.setNomeProduto(rs.getString("nomeproduto"));
+                produto.setValorUnitario(rs.getFloat("valorunitario"));
+                produto.setImagem(rs.getString("imagem"));
+                produto.setQtdeEstoque(rs.getInt("qtdeestoque"));
+
+                produtos.add(produto);
+            }
+            rs.close();
+            stmt.close();
+            return produtos;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

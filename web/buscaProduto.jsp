@@ -3,7 +3,7 @@
 
 <jsp:useBean id="dao" class="br.com.projeto.dao.ProdutoDAO"/>
 <h2>Lista do produtos cadastrados</h2>
-<form method="post" action="buscaLogin" id="buscaProduto" name="buscaProduto">
+<form method="post" action="pesquisarProduto">
     <p>
         <label for="pesquisar">Pesquisar: &nbsp;</label>
         <input type="text" id="pesquisar" name="pesquisar" size="30" />
@@ -32,6 +32,7 @@
                 <td>${produto.imagem}</td>
                 <td>${produto.qtdeEstoque}</td>
                 <td>
+                    <img src=""/>
                     <a href="#"><img src="_img/edit.png" width="16" height="16" /></a>
                     <a href="#"><img src="_img/delete.png" width="16" height="16"/></a>
                 </td>

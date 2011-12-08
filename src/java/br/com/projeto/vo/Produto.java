@@ -12,7 +12,7 @@ public class Produto {
 
     private int idProduto;
     private String nomeProduto;
-    private double valorUnitario;
+    private float valorUnitario;
     private String imagem;
     private int qtdeEstoque;
 
@@ -75,14 +75,14 @@ public class Produto {
     /**
      * @return the valorunitario
      */
-    public double getValorUnitario() {
+    public float getValorUnitario() {
         return valorUnitario;
     }
 
     /**
      * @param valorunitario the valorunitario to set
      */
-    public void setValorUnitario(double valorUnitario) {
+    public void setValorUnitario(float valorUnitario) {
         this.valorUnitario = valorUnitario;
     }
 }

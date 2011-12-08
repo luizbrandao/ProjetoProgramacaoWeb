@@ -20,9 +20,9 @@ public class LoginServlet extends HttpServlet {
             Usuario usuario = new Usuario();
             String user = req.getParameter("nomeUsuario");
             String password = req.getParameter("senha");
-            if (user != "" && password != "") {
-                usuario.setNomeUsuario(req.getParameter(user));
-                usuario.setSenha(req.getParameter(password));
+            if (!"".equals(user) && !"".equals(password)) {
+                usuario.setNomeUsuario(user);
+                usuario.setSenha(password);
                 UsuarioDAO dao = new UsuarioDAO();
                 usuarioLogin = dao.Login(usuario);
                 String kaptchaExpected = (String) req.getSession().getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);

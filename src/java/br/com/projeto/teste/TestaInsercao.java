@@ -21,9 +21,9 @@ public class TestaInsercao {
             dao.adiciona(usuario);
             System.out.println("Gravado com sucesso!");*/
             Produto produto = new Produto();
-            produto.setNomeProduto("Revista Info");
-            produto.setValorUnitario(12.79);
-            produto.setImagem("_img/Revista.png");
+            produto.setNomeProduto("Revista Linux Magazine");
+            produto.setValorUnitario(12);
+            produto.setImagem("_img/Linux.png");
             produto.setQtdeEstoque(100);
             ProdutoDAO dao  = new ProdutoDAO();
             dao.adiciona(produto);
