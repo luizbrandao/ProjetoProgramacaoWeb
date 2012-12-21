@@ -10,6 +10,13 @@
         <h1>Escolha sua Ação</h1>
         <a href="produtos.jsp">Ver Produtos</a>
         <a href="carrinho.jsp">Visualizar Carrinho</a>
+        <title>Projeto de Programação Web</title>
+    </head>
+    <body>
+        <h1>Escolha sua Ação</h1>
+        <a href="buscaProduto.jsp">Buscar Produtos</a>
+        Adicionar Produto ao Carrinho
+        Visualizar Carrinho
         Emitir Nota Fiscal
         Visualizar Notas
         <a href="logout.jsp">Logout</a>

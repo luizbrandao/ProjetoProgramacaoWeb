@@ -77,6 +77,7 @@ public class Produto {
     /**
      * @return the valorunitario
      */
+
     public double getValorUnitario() {
         return valorUnitario;
     }
@@ -114,5 +115,9 @@ public class Produto {
      */
     public void setQtde(int qtde) {
         this.qtde = qtde;
+    }
+    
+    public void setValorUnitario(float valorUnitario) {
+        this.valorUnitario = valorUnitario;
     }
 }

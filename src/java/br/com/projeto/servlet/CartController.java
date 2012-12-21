@@ -8,6 +8,7 @@ import br.com.projeto.dao.NotaFiscalDAO;
 import br.com.projeto.dao.ProdutoDAO;
 import br.com.projeto.vo.ItemNota;
 import br.com.projeto.vo.NotaFiscal;
+import br.com.projeto.dao.ProdutoDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

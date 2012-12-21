@@ -1,0 +1,13 @@
+2011-11-27 12:01:50.235 GMT : Apache Derby Servidor de Rede - 10.6.2.1 - (999685) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+----------------------------------------------------------------
+2011-11-27 12:01:51.631 GMT:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instância a816c00e-0133-e4e7-17fd-000005c84b88
+no diretório de banco de dados /home/luiz/NetBeansProjects/ProjetoProgramacaoWeb/projeto  
+
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_26-b03
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
+
+2011-11-27 14:18:05.738 GMT:
+Encerrando a instância a816c00e-0133-e4e7-17fd-000005c84b88
+----------------------------------------------------------------

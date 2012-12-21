@@ -48,7 +48,7 @@ public class ProdutoDAO {
 
     public void adiciona(Produto produto) {
         try {
-            String sql = "insert into produto (nomeproduto, valorunitario, imagem, qtdeestoque) values (?,?,?,?)";
+            String sql = "insert into produto (idproduto, nomeproduto, valorunitario, imagem, qtdeestoque) values (nextval('seq_produto'),?,?,?,?)";
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, produto.getNomeProduto());
             stmt.setDouble(2, produto.getValorUnitario());

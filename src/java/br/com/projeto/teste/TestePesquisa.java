@@ -15,7 +15,6 @@ import java.util.List;
  * @author luiz
  */
 public class TestePesquisa {
-
     public static void main(String args[]) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         try {
             Produto produto = new Produto();
@@ -23,7 +22,9 @@ public class TestePesquisa {
             
             ProdutoDAO dao = new ProdutoDAO();
             List<Produto> produtos = new ArrayList<Produto>();
+            
             produtos = dao.getPesquisa(produto);
+            
             for (Produto produto2 : produtos) {
                 System.out.println("Id Produto: " + produto2.getIdProduto());
                 System.out.println("Nome Produto: " + produto2.getNomeProduto());

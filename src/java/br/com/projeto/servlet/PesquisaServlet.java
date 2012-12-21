@@ -29,6 +29,7 @@ public class PesquisaServlet extends HttpServlet {
             List<Produto> pesquisa = new ArrayList<Produto>();
             
             pesquisa = dao.getPesquisa(produto);
+            
             if(pesquisa != null){
                 System.out.println("Busca realizada com sucesso");
                 RequestDispatcher rd = req.getRequestDispatcher("resultadoPesquisa.jsp");

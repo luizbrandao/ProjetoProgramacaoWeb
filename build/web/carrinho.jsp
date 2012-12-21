@@ -61,7 +61,10 @@
                     <tr> 
                         <td>
                             <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+<<<<<<< HEAD
                             <input type="hidden" name="idProduto" value="<c:out value="${cartItem.idProduto}"/>"/>
+=======
+>>>>>>> f500da3c50c30c7f5d248ecb9bdab36f4a285770
                             <c:out value="${cartItem.nomeProduto}"/>
                             <input type="hidden" name="modelNo" value="<c:out value="${cartItem.nomeProduto}"/>" />
                             <br/>
@@ -78,12 +81,17 @@
                         </td>
                         <td>
                             <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+<<<<<<< HEAD
                             R$<c:out value="${cartItem.valorUnitario}"/>
                             <input type="hidden" name="precoUnitario" value="<c:out value="${cartItem.valorUnitario}"/>"/>
+=======
+                            $<c:out value="${cartItem.valorUnitario}"/>
+>>>>>>> f500da3c50c30c7f5d248ecb9bdab36f4a285770
                             </font>
                         </td>
                         <td>
                             <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+<<<<<<< HEAD
                             R$<c:out value="${cartItem.precoFinal}"/>
                             <input type="hidden" name="precoFinal" value="<c:out value="${cartItem.valorUnitario}"/>"/>
                             </font>
@@ -91,6 +99,12 @@
                     </tr>
                     <input type="hidden" name="action" value="finish"/>
                     <input type="submit" name="finalizar compra" value="Finalizar"/>
+=======
+                            $<c:out value="${cartItem.precoFinal}"/>
+                            </font>
+                        </td>
+                    </tr>
+>>>>>>> f500da3c50c30c7f5d248ecb9bdab36f4a285770
                 </form>
             </c:forEach> 
             <tr> 
@@ -103,6 +117,9 @@
                 </td>
             </tr>
         </table>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f500da3c50c30c7f5d248ecb9bdab36f4a285770
     </body>
 </html>

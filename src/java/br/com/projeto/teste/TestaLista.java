@@ -10,6 +10,8 @@ import java.util.List;
 public class TestaLista {
     public static void main(String args[]) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException{
         UsuarioDAO dao = new UsuarioDAO();
+
+        /*UsuarioDAO dao = new UsuarioDAO();
         List<Usuario> usuarios = dao.getLista();
         
         for(Usuario usuario : usuarios){
@@ -17,6 +19,7 @@ public class TestaLista {
             System.out.println("Senha: "+usuario.getSenha());
         }
         /*
+        */
         ProdutoDAO dao2 = new ProdutoDAO();
         List<Produto> produtos = dao2.getLista();
         for(Produto produto : produtos){
@@ -25,6 +28,6 @@ public class TestaLista {
             System.out.println("Valor unitario: "+produto.getValorUnitario());
             System.out.println("Quantidade em estoque: "+produto.getQtdeEstoque());
             System.out.println("Imagem do produto: "+produto.getImagem());
-        }*/
+        }
     }
 }
