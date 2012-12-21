@@ -15,8 +15,8 @@ Carrinho (ItemCarrinho[ ])
 * O usuário poderá realizar as seguintes operações: Login, Buscar Produtos, Adicionar Produto ao Carrinho, Visualizar
 
 Carrinho, Emitir Nota Fiscal e Visualizar Notas;
-* O procedimento de emitir nota fiscal deve salvar os produtos do carrinho nas tabelas NotaFiscal e ItemNota e destruir o
-carrinho;
+* O procedimento de emitir nota fiscal deve salvar os produtos do carrinho nas tabelas NotaFiscal e ItemNota e destruir o carrinho;
+
 * O login deve ser mantido utilizando cookies; Quase
 * Utilizar Captcha para realizar o login; Feito
 * Permitir acesso a compra de produtos apenas se estiver logado (utilizar filtros);
