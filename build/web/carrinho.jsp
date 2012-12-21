@@ -30,17 +30,12 @@
             <div class='container_12'>
 
                 <div class='grid_12' id="admin-bar-container">	
-                    <a href="index.jsp" id="home" title="PÃ¡gina Inicial"> PÃ¡gina Inicial </a> Ola, Fulano 
-
+                    <a href="index.jsp" id="home" title="Página Inicial"> Página Inicial </a> Olá, Fulano 
                     <a href="logout.jsp" class="logout-btn"> Logout </a>
                 </div>
-
             </div>
-
         </div>
-
         <div class='container_12' id='opcao-home'>
-
             <div class='grid_12'>
                 <h3 class='titulo-geral'>Sistema de Gerenciamento de Ecommerce <br />  <small>Carrinho de Compras</small>
             </div>
@@ -61,7 +56,7 @@
                     <td>
                         <strong>
                             <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
-                            PreÃ§o UnitÃ¡rio
+                            Preço Unitário
                             </font>
                         </strong>
                     </td>
@@ -75,7 +70,7 @@
                     <tr>
                         <td colspan="4">
                             <font size="2" face="Verdana, Arial, Helvetica, sans-serif"/>
-                            - VocÃª ainda nÃ£o possui produtos no carrinho-
+                            - Você ainda não possui produtos no carrinho-
                             <br/>
                         </td>
                     </tr>

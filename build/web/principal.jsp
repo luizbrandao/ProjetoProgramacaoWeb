@@ -2,11 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-
         <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
         <title>Produtos</title><meta name="description" content="" />
         <meta name="generator" content="Studio 3 http://aptana.com/" />
         <meta name="author" content="Luís Fernando" />
@@ -46,10 +44,10 @@
                 <a href="carrinho.jsp" class='opcoes'>Visualizar Carrinho </a>
             </div>
             <div class='grid_2'>
-                <a href="" class='opcoes'>Emitir Nota fiscal</a>
+                <a href="#" class='opcoes'>Emitir Nota fiscal</a>
             </div>
             <div class='grid_2'>
-                <a href="" class='opcoes'>Visualizar notas </a>
+                <a href="#" class='opcoes'>Visualizar notas </a>
             </div>
         </div>
     </body>
