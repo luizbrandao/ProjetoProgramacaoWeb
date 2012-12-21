@@ -50,7 +50,7 @@ public class NotaFiscalDAO {
 
     public void adicionaItemNota(ItemNota item) {
         try {
-            String sql = "insert into values (?,?,?,?,?)";
+            String sql = "insert into itemNota values (?,?,?,?,?)";
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setInt(1, item.getIdNota());
             stmt.setInt(2, item.getIdProduto());
