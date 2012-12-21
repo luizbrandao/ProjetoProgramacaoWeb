@@ -40,7 +40,7 @@ public class PesquisaServlet extends HttpServlet {
                 rd.forward(req, res);
             }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage());
         }
     }
 }

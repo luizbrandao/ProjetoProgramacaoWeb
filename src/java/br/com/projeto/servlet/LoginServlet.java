@@ -46,7 +46,7 @@ public class LoginServlet extends HttpServlet {
                 System.out.print("Não foi possivel realizar o login!");
             }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage());
         }
     }
 }

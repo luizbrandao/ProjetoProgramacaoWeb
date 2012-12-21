@@ -19,8 +19,12 @@ public class ProdutoDAO {
     private ArrayList CartItems = new ArrayList();
     private double OrderTotal;
 
-    public ProdutoDAO() throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-        connection = new ConnectionFactory().getConnection();
+    public ProdutoDAO() {
+        try {
+            connection = new ConnectionFactory().getConnection();
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
     public List<Produto> getLista() {
@@ -35,14 +39,13 @@ public class ProdutoDAO {
                 produto.setValorUnitario(rs.getDouble("valorunitario"));
                 produto.setImagem(rs.getString("imagem"));
                 produto.setQtdeEstoque(rs.getInt("qtdeestoque"));
-
                 produtos.add(produto);
             }
             rs.close();
             stmt.close();
             return produtos;
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -59,7 +62,7 @@ public class ProdutoDAO {
             stmt.close();
             System.out.println("Gravado com sucesso!");
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -83,7 +86,7 @@ public class ProdutoDAO {
             stmt.close();
             return produtos;
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -131,17 +134,16 @@ public class ProdutoDAO {
             CartItems.remove(iItemIndex - 1);
             calculateOrderTotal();
         } catch (NumberFormatException nfe) {
-            System.out.println("Não possivel deletar o item selecionado: " + nfe.getMessage());
-            nfe.printStackTrace();
+            throw new RuntimeException("Não possivel deletar o item selecionado: " + nfe.getMessage());
         }
     }
 
     public void updateCartItem(String strItemIndex, String strQuantity) {
-        double precoTotal = 0.0;
-        double precoUnico = 0.0;
-        int qtde = 0;
-        int iItemIndex = 0;
-        Produto produto = null;
+        double precoTotal;
+        double precoUnico;
+        int qtde;
+        int iItemIndex;
+        Produto produto;
         try {
             iItemIndex = Integer.parseInt(strItemIndex);
             qtde = Integer.parseInt(strQuantity);
@@ -154,16 +156,14 @@ public class ProdutoDAO {
                 calculateOrderTotal();
             }
         } catch (NumberFormatException nfe) {
-            System.out.println("Não foi possivel atualizar o item selecionado: " + nfe.getMessage());
-            nfe.printStackTrace();
+            throw new RuntimeException("Não foi possivel atualizar o item selecionado: " + nfe.getMessage());
         }
-
     }
 
     public void addCartItem(String strModelNo, String strUnitCost, String strQuantity) {
-        double precoTotal = 0.0;
-        double precoUnico = 0.0;
-        int qtde = 0;
+        double precoTotal;
+        double precoUnico;
+        int qtde;
         Produto produto = new Produto();
         try {
             precoUnico = Double.parseDouble(strUnitCost);
@@ -179,7 +179,7 @@ public class ProdutoDAO {
             }
 
         } catch (NumberFormatException nfe) {
-            System.out.println("Não foi possivel adicionar itens ao carrinho: " + nfe.getMessage());
+            throw new RuntimeException("Não foi possivel adicionar itens ao carrinho: " + nfe.getMessage());
         }
     }
 }

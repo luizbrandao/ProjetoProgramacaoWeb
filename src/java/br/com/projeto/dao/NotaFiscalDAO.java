@@ -24,7 +24,7 @@ public class NotaFiscalDAO {
         try {
             connection = new ConnectionFactory().getConnection();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -44,7 +44,7 @@ public class NotaFiscalDAO {
             System.out.println("nota gerada com sucesso");
             
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -61,6 +61,7 @@ public class NotaFiscalDAO {
             stmt.close();
             System.out.println("item nota gravado com sucesso");
         } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
         }
     }
 }
