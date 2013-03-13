@@ -1,137 +1,144 @@
 body {
-	background:#fff;
+    background:#fff;
 }
 #container-login {
-	width:376px;
-	height:324px;
-	background:url("../imagens/top-login.jpg") top no-repeat;
-	padding-top:12px;
-	padding-left:12px;
-	top: 50%;
-	left: 50%;
-	margin-top: -162px;
-	margin-left: -194px;
-	position: absolute;
+    width:376px;
+    height:324px;
+    background:url("../imagens/top-login.jpg") top no-repeat;
+    padding-top:12px;
+    padding-left:12px;
+    top: 50%;
+    left: 50%;
+    margin-top: -162px;
+    margin-left: -194px;
+    position: absolute;
 }
 .login-titulo {
-	font-family: "MS Trebuchet", sans-serif;
-	font-size:14px;
-	text-align:center;
-	color:#0da2d0;
-	background:url("../imagens/login-titulo.jpg") repeat-y bottom;
-	display:block;
-	width:364px;
-	padding-top:15px;
-	height:27px;
+    font-family: "MS Trebuchet", sans-serif;
+    font-size:14px;
+    text-align:center;
+    color:#0da2d0;
+    background:url("../imagens/login-titulo.jpg") repeat-y bottom;
+    display:block;
+    width:364px;
+    padding-top:15px;
+    height:27px;
 }
 .form-login {
-	padding-top:5px;
-	background:url("../imagens/login-corpo.jpg") repeat-y top;
-	width:364px;
-	margin:0;
+    padding-top:5px;
+    background:url("../imagens/login-corpo.jpg") repeat-y top;
+    width:364px;
+    margin:0;
 }
 .form-login input[type='text'], input[type='password'] {
-	display: block;
-	margin:0 auto;
-	width:331px;
-	height:30px;
-	padding-left:10px;
-	margin-bottom:5px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border:2px solid #eee;
-	
+    display: block;
+    margin:0 auto;
+    width:331px;
+    height:30px;
+    padding-left:10px;
+    margin-bottom:5px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border:2px solid #eee;
+
 }
 .form-login img {
-	display:block;
-	margin: 20px auto 10px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border:1px solid #000;
+    display:block;
+    margin: 20px auto 10px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border:1px solid #000;
 }
 .form-login button {
-	display: block;
-	width:80px;
-	height:30px;
-	border:1px solid #A5A7A8;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	margin:20px 0px 0px 274px;
-	cursor:pointer;
+    display: block;
+    width:80px;
+    height:30px;
+    border:1px solid #A5A7A8;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    margin:20px 0px 0px 274px;
+    cursor:pointer;
 }
 
 #container-login .footer {
-	text-indent:-9999px;
-	display:block;
-	width:364px;
-	height:19px;
-	background:url("../imagens/login-footer.jpg") no-repeat top;
+    text-indent:-9999px;
+    display:block;
+    width:364px;
+    height:19px;
+    background:url("../imagens/login-footer.jpg") no-repeat top;
 }
 
 
 #admin-bar{
-	width:100%;
-	height:50px;
-	background:#333;
-	border-top:3px solid #0da2d0;
-	
+    width:100%;
+    height:50px;
+    background:#333;
+    border-top:3px solid #0da2d0;
+
 }
 
 #admin-bar-container{
-	color:#eee;
-	height:20px;
-	padding:15px 0px;
-	font-size:15px;
+    color:#eee;
+    height:20px;
+    padding:15px 0px;
+    font-size:15px;
 }
 
 
 #admin-bar-container #home{
-		display:block;
-		width:32px;
-		height:30px;
-		text-indent:-9999px;
-		margin-top:-5px;
-	    background:url("../imagens/home.png") no-repeat;
-	    float:left;
-	    margin-right:30px;
+    display:block;
+    width:32px;
+    height:30px;
+    text-indent:-9999px;
+    margin-top:-5px;
+    background:url("../imagens/home.png") no-repeat;
+    float:left;
+    margin-right:30px;
 }
 
 
 #admin-bar-container .logout-btn{
-		display:block;
-		width:80px;
-		height:30px;
-		text-indent:-9999px;
-		margin-top:-5px;
-	    float:right;
-	    background:url("../imagens/logout.png") no-repeat;
+    display:block;
+    width:80px;
+    height:30px;
+    text-indent:-9999px;
+    margin-top:-5px;
+    float:right;
+    background:url("../imagens/logout.png") no-repeat;
 }
 
 
 #opcao-home{
-	padding-bottom:30px;
- 	border-bottom:2px solid #777;
+    padding-bottom:30px;
+    border-bottom:2px solid #777;
 }
 
 .titulo-geral{
-	margin-top:30px;
-	font-family: Calibri, Sans, sans-serif;
-	font-size: 26px;
-	margin-bottom:50px;
-	color:#0da2d0;
+    margin-top:30px;
+    font-family: Calibri, Sans, sans-serif;
+    font-size: 26px;
+    margin-bottom:50px;
+    color:#0da2d0;
 }
 
 .oque{
 
-	font-family: Calibri, Sans;
-	font-size:22px;
+    font-family: Calibri, Sans;
+    font-size:22px;
 }
 
 .opcoes{
-	text-decoration:none;
-	font-size:17px;
-	color:#333;
+    text-decoration:none;
+    font-size:17px;
+    color:#333;
 
 }
-
-
+.produtos{
+    width: 100%;
+}
+.produto{
+    width: 25%;
+    float: left;
+    margin-right: 5px;
+    margin-top: 2px;
+}
