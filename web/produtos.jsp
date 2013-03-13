@@ -41,24 +41,26 @@
             <div class='grid_12'>
                 <h3 class='titulo-geral'>Sistema de Gerenciamento de Ecommerce <br />  <small>Produtos</small>
             </div>
-            <c:forEach var="produto" items="${dao.lista}">
-                <div>
-                    <form method="POST" action="servlet/CartController">
-                        <fieldset>
-                            Id do Produto: ${produto.idProduto}<br/>
-                            Nome do Produto: ${produto.nomeProduto}<br/>
-                            <input type="hidden"  name="modelNo" value="${produto.nomeProduto}"/>
-                            ValorUnitario: ${produto.valorUnitario}<br/>
-                            <input type="hidden" name="price" value="${produto.valorUnitario}"/>
-                            Quantidade: <input type="text" size="2" value="1" name="quantity"/><br/>
-                            Imagem do Produto: <a href="${produto.imagem}"></a><br/>
-                            Quantidade em Estoque: ${produto.qtdeEstoque}<br/>
-                            <input type="hidden" name="action" value="add"/>
-                            <input type="submit" name="addToCart" value="Adicionar ao Carrinho"/>
-                        </fieldset>
-                    </form>
-                </div>
-            </c:forEach>
+            <div class="grid_12">
+                <c:forEach var="produto" items="${dao.lista}">
+                    <div>
+                        <form method="POST" action="servlet/CartController">
+                            <fieldset>
+                                Id do Produto: ${produto.idProduto}<br/>
+                                Nome do Produto: ${produto.nomeProduto}<br/>
+                                <input type="hidden"  name="modelNo" value="${produto.nomeProduto}"/>
+                                ValorUnitario: ${produto.valorUnitario}<br/>
+                                <input type="hidden" name="price" value="${produto.valorUnitario}"/>
+                                Quantidade: <input type="text" size="2" value="1" name="quantity"/><br/>
+                                Imagem do Produto: <a href="${produto.imagem}"></a><br/>
+                                Quantidade em Estoque: ${produto.qtdeEstoque}<br/>
+                                <input type="hidden" name="action" value="add"/>
+                                <input type="submit" name="addToCart" value="Adicionar ao Carrinho"/>
+                            </fieldset>
+                        </form>
+                    </div>
+                </c:forEach>
+            </div>
         </div>
     </body>
 </html>
