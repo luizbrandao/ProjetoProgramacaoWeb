@@ -13,7 +13,7 @@ public class ConnectionFactory {
              return DriverManager.getConnection("jdbc:derby://localhost:1527/projeto;create=true");*/
             //return DriverManager.getConnection("jdbc:derby:projeto;create=true");
             Class.forName("org.postgresql.Driver");
-            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/projeto", "postgres", "l0g4n8899$");
+            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/projeto", "postgres", "");
         } catch (SQLException e) {
             throw new RuntimeException(e.getMessage());
         }
